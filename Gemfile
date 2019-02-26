@@ -3,6 +3,7 @@ ruby '2.4.5'
 
 
 gem 'devise'
+gem 'devise_invitable', '~> 2.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
