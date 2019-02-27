@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { invitations: 'users/invitations' }
   root to: 'pages#home'
 
   resources :events, only: [:new, :create, :show] do

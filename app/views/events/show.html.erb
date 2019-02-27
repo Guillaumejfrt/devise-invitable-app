@@ -1,10 +1,14 @@
 <p><%= @event.description %></p>
 
-<form action=<%= invite_event_path(@event) %> method="post" remote=true>
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <label for="guest_name">Guest name</label>
-  <input type="text" name="guest_name">
-  <label for="guest_email">Guest email</label>
-  <input type="text" name="guest_email">
-  <button type="submit">Invitez</button>
-</form>
+<div id="invitation-container">
+  <form action=<%= invite_event_path(@event) %> method="post" data-remote=true>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <label for="guest_name">Guest name</label>
+    <input type="text" name="guest_name" id="guest_name">
+
+    <label for="guest_email">Guest email</label>
+    <input type="text" name="guest_email" id="guest_email">
+
+    <button type="submit">Invitez</button>
+  </form>
+</div>

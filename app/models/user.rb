@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :events
 
-  after_invitation_accepted :invitation_accepted!
+  before_invitation_accepted :invitation_accepted!
 
   private
 

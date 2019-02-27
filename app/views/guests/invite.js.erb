@@ -1,0 +1,9 @@
+const invitationForm = document.querySelector("#invitation-container form");
+
+invitationForm.reset(); // empty inputs
+
+invitationForm.insertAdjacentHTML(
+  "afterend", "<p style='color: red'><%= @guest_name %> has been invited. Let's invite someonelse</p>"
+);
+
+invitationForm.querySelector('#guest_name').focus(); // refocus on guest_name input
